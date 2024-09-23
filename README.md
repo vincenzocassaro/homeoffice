@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Home Office
 
-## Getting Started
+This is a toy project made for fun, inspired by [this tweet](https://x.com/ytcodeantonio/status/1833585123553644955?s=46&t=aZ4g9f1nMB1caZcwImCewg) from [Code With Antonio](https://x.com/YTCodeAntonio)
 
-First, run the development server:
+It was created using [V0](https://v0.dev/chat) and [shadcn/ui](https://ui.shadcn.com/) on Vscode with Copilot
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+It is broken:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [ ] images are not optimized for the web
+- [ ] items are not clickable
+- [ ] the list is very short and unmaintained
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+It could be expanded:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] add more items to every list
+- [ ] add more lists
+- [ ] create a form to sumbit/sponsor items and or companies

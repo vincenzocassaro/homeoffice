@@ -195,7 +195,7 @@ export function HomeOfficeSetupsComponent() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">About the Author</h2>
             <img
-              src="/propicYellow.png?height=150&width=150"
+              src="/PropicYellow.png?height=150&width=150"
               alt="Author"
               className="w-32 h-32 rounded-full mx-auto mb-4"
             />

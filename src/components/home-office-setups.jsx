@@ -200,9 +200,9 @@ export function HomeOfficeSetupsComponent() {
               className="w-32 h-32 rounded-full mx-auto mb-4"
             />
             <p className="text-xl mb-6">
-              Hi, I'm Vincenzo Cassaro, a home office enthusiast and
-              productivity expert. I've been working remotely for over 5 years
-              and love sharing my experiences to help others create their
+              Hi, I&apos;m Vincenzo Cassaro, a home office enthusiast and
+              productivity expert. I&apos;ve been working remotely for over 5
+              years and love sharing my experiences to help others create their
               perfect workspace.
             </p>
             <div className="flex justify-center space-x-4 mb-8">

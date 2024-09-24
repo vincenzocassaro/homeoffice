@@ -16,6 +16,7 @@ export function HomeOfficeSetupsComponent() {
     {
       category: "Budget-Friendly",
       color: "bg-pink-100",
+      title_color: "text-[#5b2245]",
       items: [
         {
           type: "Chair",
@@ -43,6 +44,7 @@ export function HomeOfficeSetupsComponent() {
     {
       category: "Mid-Range",
       color: "bg-blue-100",
+      title_color: "text-[#1a3e72]",
       items: [
         {
           type: "Chair",
@@ -70,6 +72,7 @@ export function HomeOfficeSetupsComponent() {
     {
       category: "Premium",
       color: "bg-green-100",
+      title_color: "text-[#22543d]",
       items: [
         {
           type: "Chair",
@@ -97,6 +100,7 @@ export function HomeOfficeSetupsComponent() {
     {
       category: "Ikea",
       color: "bg-gradient-to-r from-[#0058AB] to-[#FFDA1A]",
+      title_color: "text-[#FFFFFF]",
       items: [
         {
           type: "Chair",
@@ -158,7 +162,7 @@ export function HomeOfficeSetupsComponent() {
             key={index}
             className={`mb-12 p-6 rounded-lg ${setup.color}`}
           >
-            <h3 className="text-2xl font-semibold mb-6 text-white">
+            <h3 className={`text-2xl font-semibold mb-6 ${setup.title_color}`}>
               {setup.category}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

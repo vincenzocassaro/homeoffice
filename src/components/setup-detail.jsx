@@ -1,5 +1,6 @@
 "use client";
 
+
 import {
     Card,
     CardContent,
@@ -12,6 +13,7 @@ import Link from "next/link";
 import { ArrowLeft, Home, Info, Mail } from "lucide-react";
 
 export function SetupDetailComponent({ category }) {
+
     const setups = [
         {
           category: "Budget-Friendly",
@@ -130,6 +132,7 @@ export function SetupDetailComponent({ category }) {
   if (!setup) {
     return <div>Category not found</div>;
   }
+
   return (
     <div className="min-h-screen flex flex-col">
       <nav className="bg-gray-800 text-white p-4">
@@ -142,6 +145,7 @@ export function SetupDetailComponent({ category }) {
           </div>
         </div>
       </nav>
+
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="flex items-center mb-8">
           <Link href="/">
@@ -151,6 +155,7 @@ export function SetupDetailComponent({ category }) {
           </Link>
           <h1 className={`text-3xl font-bold ${setup.title_color}`}>{category} Home Office Setup</h1>
         </div>
+
         <Card className={`${setup.color} p-6`}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {setup.items.map((item, index) => (

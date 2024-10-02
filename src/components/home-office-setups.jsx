@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export function HomeOfficeSetupsComponent() {
   const setups = [
@@ -162,9 +163,13 @@ export function HomeOfficeSetupsComponent() {
             key={index}
             className={`mb-12 p-6 rounded-lg ${setup.color}`}
           >
-            <h3 className={`text-2xl font-semibold mb-6 ${setup.title_color}`}>
-              {setup.category}
-            </h3>
+            <Link
+              className={`text-2xl font-semibold mb-8 ${setup.title_color} relative group`}
+              href={`/details/${encodeURIComponent(setup.category)}`}
+            >
+              <h3 className="mb-2 inline-block">{setup.category}</h3>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-current transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+            </Link>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {setup.items.map((item, itemIndex) => (
                 <Card key={itemIndex} className="bg-white">

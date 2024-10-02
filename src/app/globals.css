@@ -76,3 +76,24 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.title {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+.title::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: currentColor;
+  transition: width 0.4s ease, right 0.4s ease;
+}
+.title:hover::after {
+  width: 100%;
+  right: 0;
+}

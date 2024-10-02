@@ -1,5 +1,6 @@
 "use client";
 
+import { setups } from "@/data/setupData";
 import {
   Card,
   CardContent,
@@ -10,122 +11,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export function HomeOfficeSetupsComponent() {
-  const setups = [
-    {
-      category: "Budget-Friendly",
-      color: "bg-pink-100",
-      title_color: "text-[#5b2245]",
-      items: [
-        {
-          type: "Chair",
-          name: "ErgoBasic Mesh Chair",
-          price: "$89.99",
-          vendor: "AmazonBasics",
-          image: "/ergobasic.jpg?height=100&width=100",
-        },
-        {
-          type: "Desk",
-          name: "SimpleWork Writing Desk",
-          price: "$129.99",
-          vendor: "Wayfair",
-          image: "/simplework.webp?height=100&width=100",
-        },
-        {
-          type: "Lamp",
-          name: "LEDit Desk Lamp",
-          price: "$24.99",
-          vendor: "Target",
-          image: "/ledit.png?height=100&width=100",
-        },
-      ],
-    },
-    {
-      category: "Mid-Range",
-      color: "bg-blue-100",
-      title_color: "text-[#1a3e72]",
-      items: [
-        {
-          type: "Chair",
-          name: "Steelcase Series 1",
-          price: "$415.00",
-          vendor: "Steelcase",
-          image: "/steelcase.jpg?height=100&width=100",
-        },
-        {
-          type: "Desk",
-          name: "Jarvis Standing Desk",
-          price: "$569.00",
-          vendor: "Fully",
-          image: "/jarvis.avif?height=100&width=100",
-        },
-        {
-          type: "Lamp",
-          name: "BenQ e-Reading LED Lamp",
-          price: "$199.99",
-          vendor: "BenQ",
-          image: "/benq.jpg?height=100&width=100",
-        },
-      ],
-    },
-    {
-      category: "Premium",
-      color: "bg-green-100",
-      title_color: "text-[#22543d]",
-      items: [
-        {
-          type: "Chair",
-          name: "Herman Miller Aeron",
-          price: "$1,395.00",
-          vendor: "Herman Miller",
-          image: "/aeron.webp?height=100&width=100",
-        },
-        {
-          type: "Desk",
-          name: "Uplift V2 4-Leg Desk",
-          price: "$1,299.00",
-          vendor: "Uplift Desk",
-          image: "/uplift.jpg?height=100&width=100",
-        },
-        {
-          type: "Lamp",
-          name: "Dyson Lightcycle Morph",
-          price: "$649.99",
-          vendor: "Dyson",
-          image: "/lightcycle.webp?height=100&width=100",
-        },
-      ],
-    },
-    {
-      category: "Ikea",
-      color: "bg-gradient-to-r from-[#0058AB] to-[#FFDA1A]",
-      title_color: "text-[#FFFFFF]",
-      items: [
-        {
-          type: "Chair",
-          name: "MARKUS Office Chair",
-          price: "$229.00",
-          vendor: "Ikea",
-          image: "/markus.jpeg?height=100&width=100",
-        },
-        {
-          type: "Desk",
-          name: "BEKANT Desk",
-          price: "$249.00",
-          vendor: "Ikea",
-          image: "/bekant.jpg?height=100&width=100",
-        },
-        {
-          type: "Lamp",
-          name: "FORSÅ Work Lamp",
-          price: "$29.99",
-          vendor: "Ikea",
-          image: "/forsa.avif?height=100&width=100",
-        },
-      ],
-    },
-  ];
+  // Remove the setups constant from here, as we're now importing it
 
   return (
     <div className="min-h-screen">
@@ -162,9 +51,13 @@ export function HomeOfficeSetupsComponent() {
             key={index}
             className={`mb-12 p-6 rounded-lg ${setup.color}`}
           >
-            <h3 className={`text-2xl font-semibold mb-6 ${setup.title_color}`}>
-              {setup.category}
-            </h3>
+            <Link
+              className={`text-2xl font-semibold mb-8 ${setup.title_color} relative group`}
+              href={`/details/${encodeURIComponent(setup.category)}`}
+            >
+              <h3 className="mb-2 inline-block">{setup.category}</h3>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-current transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
+            </Link>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {setup.items.map((item, itemIndex) => (
                 <Card key={itemIndex} className="bg-white">
